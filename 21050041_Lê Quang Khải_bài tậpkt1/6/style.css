@@ -1,0 +1,28 @@
+.container {
+    background-image: url(https://cdn.glitch.global/87ce3e62-e072-4f35-aad3-44d88f353cb0/wp5984568.jpg?v=1709433805334);
+    background-size: cover;
+    padding: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .item {
+    text-align: center;
+}
+
+.container .item i {
+    font-size: 60px;
+    color: blue;
+}
+
+.container .item p#quantity {
+    font-size: 70px;
+    color: white;
+}
+
+.container .item p.content {
+    color: yellow;
+    font-size: 40px;
+}

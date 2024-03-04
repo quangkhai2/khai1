@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.container #logoVETC {
+    width: 15%;
+}
+
+.container h1 {
+    font-size: 100px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.container h1 #name {
+    color: blue;
+}
+
+.container #details {
+    font-size: 30px;
+}
+
+.container .buttons{
+    width: 30%;
+    margin: 50px auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .buttons button {
+    cursor: pointer;
+
+    padding: 30px 10px;
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.container .buttons button #leftIcon {
+    color: blue;
+}
+
+.container .buttons button #rightIcon {
+    color: pink;
+}

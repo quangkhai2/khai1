@@ -1,0 +1,33 @@
+body {
+    width: 100%;
+    margin: 0;
+}
+
+.container {
+    padding: 200px;
+    background-image: url(https://cdn.glitch.global/87ce3e62-e072-4f35-aad3-44d88f353cb0/coffee.webp?v=1709435128282);
+    text-align: center;
+}
+
+.container h1 {
+    color: white;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.container p {
+    color: white;
+    font-size: 30px;
+}
+
+.container button {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    padding: 25px 15px;
+    background-color: red;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
