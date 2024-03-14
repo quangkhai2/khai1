@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BÀI 3. LIÊN HỆ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BÀI 3. LIÊN HỆ</h1>
+        <form id="contact-form">
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Điện thoại di động:</label>
+            <input type="tel" id="phone" required>
+            <label for="message">Nội dung thư gửi:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="button" onclick="submitForm()">GỬI TIN NHẮN</button>
+        </form>
+    </div>
+    <script>
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+            // Assuming you'll handle form submission here
+            // For demonstration purposes, you can log the form data
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Phone:', phone);
+            console.log('Message:', message);
+        }
+    </script>
+</body>
+</html>
