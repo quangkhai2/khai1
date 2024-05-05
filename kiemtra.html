@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="anh_move.css">
+<!--<script src="LT web/script.js"></script>-->
+</head>
+<body>
+<div class="wrapper">
+<div class="image">
+<img src="E:\Dao Phay Ngón\New folder\21050041_Lê Quang Khải_kiemtra\21050041_Lê Quang Khải\hinh-nen-thien-nhien-dep-nhat-33.jpg" alt="thien nhien">
+</div>
+<!--anhl-->
+<div class="image">
+<img src="E:\Dao Phay Ngón\New folder\21050041_Lê Quang Khải_kiemtra\21050041_Lê Quang Khải\anh-thien-nhien.jpg" alt="thien nhien">
+</div>
+<!--anhl-->
+<div class="image">
+<img src="E:\Dao Phay Ngón\New folder\21050041_Lê Quang Khải_kiemtra\21050041_Lê Quang Khải\anh-thien-nhien-viet-nam-35.jpg" alt="thien nhien">
+</div>
+<!--anh1-->
+<div class="image">
+<img src="E:\Dao Phay Ngón\New folder\21050041_Lê Quang Khải_kiemtra\21050041_Lê Quang Khải\canh-dep-thien-nhien-con-duong-lat-da-di-vao-rung-tham_085323525.jpg" alt="thien nhien">
+</div>
+<!--anh1-->
+<div class="image">
+<img src="E:\Dao Phay Ngón\New folder\21050041_Lê Quang Khải_kiemtra\21050041_Lê Quang Khải\ce1225f92e766b3a87113dc69560e88f.jpg" alt="thien nhien">
+</div>
+<!--anhl-->
+<div class="image"> 
+<img src="E:\Dao Phay Ngón\New folder\21050041_Lê Quang Khải_kiemtra\21050041_Lê Quang Khải\ce1225f92e766b3a87113dc69560e88f.jpg" alt="thien nhien">
+</div>
+<div class="gallery">
+<i class="fa-regular fa-xmark close"></i>
+<div class="gallery_inner">
+<img src="E:\Dao Phay Ngón\New folder\21050041_Lê Quang Khải_kiemtra\21050041_Lê Quang Khải\hinh-nen-thien-nhien-dep-nhat-33.jpg" alt="thien">
+</div>
+<div class="control prev">
+<i class="fa-solid fa-chevron-left"></i>
+</div>
+<div class="control right">
+<i class="fa-solid fa-chevron-right"></i>
+</div>
+</div>
+</div>
+</body>
+<script>
+var images = document.querySelectorAll('.image img');
+var prev = document.querySelector('.prev');
+var next = document.querySelector('.right');
+var close = document.querySelector('.close');
+var galleryImg = document.querySelector('.gallery_inner img');
+var gallery = document.querySelector('.gallery');
+
+var currentIndex = 0;
+
+function showGallery() {
+    if (currentIndex === 0) {
+        prev.classList.add('hide');
+    } else {
+        prev.classList.remove('hide');
+        if (currentIndex === images.length - 1) {
+            next.classList.add('hide');
+        } else {
+            next.classList.remove('hide');
+        }
+    }
+
+    updateImage();
+}
+
+
+function updateImage() {
+    galleryImg.src = images[currentIndex].src;
+}
+
+images.forEach((item, index) => {
+    item.addEventListener('click', function () {
+        currentIndex = index;
+        showGallery();
+    });
+});
+
+close.addEventListener('click', function (e) {
+    e.stopPropagation();
+    gallery.classList.remove('show');
+});
+
+document.addEventListener('keydown', function (e) {
+    e.stopPropagation();
+    if (e.keyCode === 27) {
+        gallery.classList.remove('show');
+    }
+});
+
+prev.addEventListener('click', function () {
+    if (currentIndex > 0) {
+        currentIndex--;
+        showGallery();
+    }
+});
+
+next.addEventListener('click', function () {
+    if (currentIndex < images.length - 1) {
+        currentIndex++;
+        showGallery();
+    }
+});
+   
+  </script>
+</html>
